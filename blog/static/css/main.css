@@ -1,0 +1,14 @@
+body {
+    background: linear-gradient(to right, rgba(197, 243, 230, 1) 0%, rgba(48, 194, 251, 1) 100%);
+}
+
+.shadow{
+    box-shadow: 0 8px 3px -8px black;
+    background-image: radial-gradient(cover, #e8eaec, #a4a8ae);
+    background: white;
+}
+
+.wmd-panel{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}

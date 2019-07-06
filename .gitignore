@@ -1,0 +1,11 @@
+# visual code studio
+.vscode
+
+# pycache
+__pycache__
+
+# compiled files
+*.pyc
+
+# project folder
+MdBlog

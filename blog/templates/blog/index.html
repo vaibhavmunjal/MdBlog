@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block post %}
+
+
+{% for post in post_list %}
+<div class="mt-3 card mb-5 border-primary">
+    <img class="img-responsive" src="{% if post.image %}{{ post.image.url }} {% endif %}"  height="auto">
+    <div class="card-body adjust-content">
+        <h3 class="card-title">{{ post.title }} <small><small>{{ post.timestamp|timesince }} ago</small></small>
+        </h3>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">{{ post.get_markdown|linebreaks|truncatechars_html:12 }}</p>
+        <a href="{% url 'post' post.slug %}" class="card-link btn btn-primary">View</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
